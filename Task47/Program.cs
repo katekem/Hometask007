@@ -19,7 +19,7 @@ double[,] FillArray(int numLine, int NumColumns)
     {
         for (int j = 0; j < matrix.GetLength(1); j++) // Столбец
         {
-            matrix[i,j] = new Random().Next(0,10);
+            matrix[i, j] = new Random().NextDouble() * 30 - 15;
         }
     }
     return matrix;
@@ -29,14 +29,14 @@ void PrintArray(double[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-     for (int j = 0; j < matrix.GetLength(1); j++)
-     {
-        Console.Write($"{matrix[i,j]}\t");
-     }   
-     Console.WriteLine();
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write($"{matrix[i, j]}\t");
+        }
+        Console.WriteLine();
     }
 }
 
 
-double[,] myArray = FillArray(Prompt("Введите m: "),Prompt("Введите n: "));
+double[,] myArray = FillArray(Prompt("Введите m: "), Prompt("Введите n: "));
 PrintArray(myArray);
