@@ -31,7 +31,7 @@ void PrintArray(double[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write($"{matrix[i, j]}\t");
+            Console.Write($"{matrix[i, j]:f1}\t");
         }
         Console.WriteLine();
     }
